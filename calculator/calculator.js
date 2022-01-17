@@ -1,8 +1,8 @@
 function computerPlay() {
     let choices = ["Rock", "Paper", "Scissors"]
-    return choices[Math.floor(Math.random() * 3)];
-    
+    return choices[Math.floor(Math.random() * 3)];   
 }
+
 function playRound(playerSelection, computerSelection) {
     switch(playerSelection) {
         case computerSelection:
@@ -16,7 +16,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
 function game() {
     let playerCounter = 0;
     let computerCounter = 0;
@@ -26,12 +25,6 @@ function game() {
         
         
         (result.includes("win"))? playerCounter++:(result.includes("lose")) && computerCounter++;
-        
-        // {
-        //     playerCounter++;
-        // } else if (result.includes("lose")) {
-        //     computerCounter++;
-        // } else {
     }
     
     (playerCounter === computerCounter)?console.log("It's an overall tie!"):console.log((playerCounter > computerCounter)?"You won the game!":"You lost the game!");
