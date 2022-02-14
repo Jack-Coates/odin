@@ -1,5 +1,5 @@
 function computerPlay() {
-    let choices = ["Rock", "Paper", "Scissors"]
+    let choices = ["Rock", "Paper", "Scissors"];
     return choices[Math.floor(Math.random() * 3)];   
 }
 
@@ -22,11 +22,8 @@ function game() {
     for (let i=0; i < games; i++) {
         let result = playRound(prompt("Choose Rock, Paper or Scissors").toLowerCase(), computerPlay().toLowerCase());
         console.log(result);
-        
-        
-        (result.includes("win"))? playerCounter++:(result.includes("lose")) && computerCounter++;
+        result.includes("win")? playerCounter++:(result.includes("lose")) && computerCounter++;
     }
-    
     (playerCounter === computerCounter)?console.log("It's an overall tie!"):console.log((playerCounter > computerCounter)?"You won the game!":"You lost the game!");
 }
 
